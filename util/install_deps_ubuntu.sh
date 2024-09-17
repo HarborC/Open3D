@@ -54,5 +54,6 @@ if [ "$(uname -m)" == "aarch64" ]; then
 fi
 
 echo "apt-get install ${deps[*]}"
+$SUDO sed -i '/geoclue/d' /var/lib/dpkg/statoverride
 $SUDO apt-get update
 $SUDO apt-get install -y ${APT_CONFIRM} ${deps[*]}

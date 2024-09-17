@@ -53,6 +53,6 @@ if [ "$(uname -m)" == "aarch64" ]; then
     deps+=("gfortran")
 fi
 
-echo "apt-get install ${deps[*]}"
+echo "apt-get install -y ${deps[*]}"
 $SUDO apt-get update
 $SUDO apt-get install ${APT_CONFIRM} ${deps[*]}
